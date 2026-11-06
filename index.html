@@ -1,71 +1,543 @@
-<nav class="navbar navbar-expand-md bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-      TechFix
-    </a>
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="navbar-nav">
-      <a class="nav-link" href="index.html">Início</a>
-      <a class="nav-link" href="orcamento.html">Orçamento</a>
-    </div>
-  </div>
-</nav>
-<main class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6">
+    <title>Belle Clinic | Estética e Bem-Estar</title>
 
-      <div class="card shadow-sm">
-        <div class="card-body p-4">
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-          <h1 class="h3 mb-3">Simulador de Orçamento</h1>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-          <form id="formulario" novalidate>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-            <div class="mb-3">
-              <label for="nome" class="form-label">
-                Nome do cliente
-              </label>
-              <input
-                type="text"
-                id="nome"
-                class="form-control"
-              >
-            </div>
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-            <div class="mb-3">
-              <label for="servico" class="form-label">
-                Serviço
-              </label>
-              <select id="servico" class="form-select">
-                <option value="120">Formatação — R$ 120</option>
-                <option value="80">Limpeza — R$ 80</option>
-                <option value="50">Instalação — R$ 50</option>
-              </select>
-            </div>
+<body>
 
-            <div class="mb-3">
-              <label for="quantidade" class="form-label">
-                Quantidade
-              </label>
-              <input
-                type="number"
-                id="quantidade"
-                class="form-control"
-                min="1"
-                step="1"
-              >
-            </div>
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu-belle fixed-top">
+        <div class="container">
 
-            <button type="submit" class="btn btn-primary w-100">
-              Calcular orçamento
+            <a class="navbar-brand marca" href="#inicio">
+                belle<span>.</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </form>
 
-          <div id="resultado" class="alert d-none mt-3" role="alert"></div>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">A clínica</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#procedimentos">Procedimentos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agendamento">Agendamento</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-belle-nav ms-lg-2" href="#agendamento">
+                            Agende seu horário
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
+
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="inicio">
+            <div class="container">
+                <div class="row align-items-center min-vh-100 py-5">
+
+                    <div class="col-lg-6 py-5">
+                        <p class="subtitulo texto-dourado">
+                            BELLE CLINIC · ESTÉTICA E BEM-ESTAR
+                        </p>
+
+                        <h1 class="titulo titulo-inicio">
+                            Sua beleza merece
+                            <em>cuidado e atenção.</em>
+                        </h1>
+
+                        <p class="texto-inicio mt-4">
+                            Um espaço pensado para proporcionar tranquilidade,
+                            acolhimento e uma experiência especial de autocuidado.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#procedimentos" class="btn btn-belle btn-lg">
+                                Conheça nossos procedimentos
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+
+                            <a href="#sobre" class="btn btn-outline-belle-claro btn-lg">
+                                Conheça a clínica
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="imagem-inicio">
+                            <img
+                                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=85"
+                                alt="Ambiente tranquilo de spa"
+                                class="img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAIXA DE DESTAQUES -->
+        <section class="faixa-belle py-4">
+            <div class="container">
+                <div class="row text-center g-4">
+
+                    <div class="col-12 col-md-4">
+                        <i class="bi bi-heart faix a-icone"></i>
+                        <h5>Cuidado em cada detalhe</h5>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <i class="bi bi-flower1 faixa-icone"></i>
+                        <h5>Bem-estar e tranquilidade</h5>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <i class="bi bi-stars faixa-icone"></i>
+                        <h5>Experiência acolhedora</h5>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- A CLÍNICA -->
+        <section id="sobre" class="secao-sobre py-5">
+            <div class="container py-5">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6">
+                        <div class="imagem-sobre">
+                            <img
+                                src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1100&q=85"
+                                alt="Espaço de atendimento e relaxamento"
+                                class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <p class="subtitulo">UM POUCO SOBRE NÓS</p>
+
+                        <h2 class="titulo titulo-secao">
+                            Um lugar feito para
+                            <em>cuidar de você.</em>
+                        </h2>
+
+                        <p class="texto-secao mt-4">
+                            A Belle Clinic nasceu com a proposta de oferecer um
+                            ambiente agradável, onde cada pessoa possa encontrar
+                            um momento de pausa e atenção.
+                        </p>
+
+                        <p class="texto-secao">
+                            Acreditamos que o cuidado começa no acolhimento.
+                            Por isso, valorizamos uma experiência tranquila,
+                            organizada e atenciosa em cada atendimento.
+                        </p>
+
+                        <div class="row g-3 mt-3">
+
+                            <div class="col-sm-6">
+                                <div class="valor-card">
+                                    <i class="bi bi-heart-pulse"></i>
+                                    <h5>Nossa missão</h5>
+                                    <p>Promover bem-estar por meio de cuidado e atenção.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="valor-card">
+                                    <i class="bi bi-gem"></i>
+                                    <h5>Nossos valores</h5>
+                                    <p>Respeito, acolhimento, dedicação e qualidade.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROCEDIMENTOS -->
+        <section id="procedimentos" class="secao-procedimentos py-5">
+            <div class="container py-5">
+
+                <div class="text-center mb-5">
+                    <p class="subtitulo texto-dourado">NOSSOS CUIDADOS</p>
+
+                    <h2 class="titulo titulo-claro">
+                        Conheça nossos <em>procedimentos</em>
+                    </h2>
+
+                    <p class="texto-claro mt-3">
+                        Momentos de cuidado pensados para proporcionar
+                        conforto e bem-estar.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- LIMPEZA DE PELE -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-procedimento h-100">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=85"
+                                class="card-img-top"
+                                alt="Cuidados faciais">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Limpeza de pele</h5>
+
+                                <p class="card-text">
+                                    Procedimento voltado à higienização da pele,
+                                    auxiliando na remoção de impurezas e no cuidado facial.
+                                </p>
+
+                                <button class="btn btn-service" type="button"
+                                    data-service="Limpeza de pele">
+                                    Tenho interesse
+                                    <i class="bi bi-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- MASSAGEM -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-procedimento h-100">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=85"
+                                class="card-img-top"
+                                alt="Massagem relaxante">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Massagem relaxante</h5>
+
+                                <p class="card-text">
+                                    Técnica que busca proporcionar relaxamento,
+                                    conforto e uma sensação de tranquilidade.
+                                </p>
+
+                                <button class="btn btn-service" type="button"
+                                    data-service="Massagem relaxante">
+                                    Tenho interesse
+                                    <i class="bi bi-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- HIDRATAÇÃO -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-procedimento h-100">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=700&q=85"
+                                class="card-img-top"
+                                alt="Tratamento de hidratação facial">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Hidratação facial</h5>
+
+                                <p class="card-text">
+                                    Cuidado que auxilia na reposição de água
+                                    e na manutenção da hidratação da pele.
+                                </p>
+
+                                <button class="btn btn-service" type="button"
+                                    data-service="Hidratação facial">
+                                    Tenho interesse
+                                    <i class="bi bi-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- DRENAGEM -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card card-procedimento h-100">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=85"
+                                class="card-img-top"
+                                alt="Ambiente de cuidado corporal">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Drenagem linfática</h5>
+
+                                <p class="card-text">
+                                    Técnica de massagem que auxilia o sistema
+                                    linfático e pode contribuir para reduzir inchaços.
+                                </p>
+
+                                <button class="btn btn-service" type="button"
+                                    data-service="Drenagem linfática">
+                                    Tenho interesse
+                                    <i class="bi bi-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AGENDAMENTO: UMA ÚNICA SEÇÃO -->
+        <section id="agendamento" class="secao-agendamento py-5">
+            <div class="container py-5">
+
+                <div class="text-center mb-5">
+                    <p class="subtitulo texto-dourado">SEU MOMENTO DE CUIDADO</p>
+
+                    <h2 class="titulo titulo-claro">
+                        Agendamento
+                    </h2>
+
+                    <p class="texto-claro mt-3">
+                        Preencha os dados abaixo para solicitar seu horário.
+                    </p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+
+                        <div class="formulario-belle">
+
+                            <form id="formAgendamento" novalidate>
+
+                                <div class="row g-4">
+
+                                    <div class="col-md-6">
+                                        <label for="nome" class="form-label">Nome completo</label>
+
+                                        <input type="text" class="form-control" id="nome"
+                                            placeholder="Digite seu nome">
+
+                                        <div class="invalid-feedback" id="erroNome"></div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label for="telefone" class="form-label">Telefone</label>
+
+                                        <input type="tel" class="form-control" id="telefone"
+                                            placeholder="(00) 00000-0000">
+
+                                        <div class="invalid-feedback" id="erroTelefone"></div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">E-mail</label>
+
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="seuemail@email.com">
+
+                                        <div class="invalid-feedback" id="erroEmail"></div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label for="servico" class="form-label">Procedimento</label>
+
+                                        <select class="form-select" id="servico">
+                                            <option value="">Selecione um procedimento</option>
+                                            <option value="Limpeza de pele">Limpeza de pele</option>
+                                            <option value="Massagem relaxante">Massagem relaxante</option>
+                                            <option value="Hidratação facial">Hidratação facial</option>
+                                            <option value="Drenagem linfática">Drenagem linfática</option>
+                                        </select>
+
+                                        <div class="invalid-feedback" id="erroServico"></div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label for="data" class="form-label">Data desejada</label>
+
+                                        <input type="date" class="form-control" id="data">
+
+                                        <div class="invalid-feedback" id="erroData"></div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <label for="observacao" class="form-label">Observações</label>
+
+                                        <input type="text" class="form-control" id="observacao"
+                                            placeholder="Alguma informação adicional?">
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div id="feedback" class="mt-2" role="status"
+                                            aria-live="polite"></div>
+                                    </div>
+
+
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-belle btn-lg"
+                                            id="btnEnviar">
+                                            Enviar solicitação
+                                            <i class="bi bi-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                        <!-- LISTA DINÂMICA DENTRO DA MESMA SEÇÃO -->
+                        <div id="areaAgendamentos" class="mt-5 d-none">
+
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                                <h3 class="titulo titulo-claro mb-0">
+                                    Solicitações recebidas
+                                </h3>
+
+                                <span id="contadorAgendamentos" class="contador-belle"></span>
+                            </div>
+
+                            <div id="listaAgendamentos" class="row g-4"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape py-5">
+        <div class="container">
+
+            <div class="row align-items-center gy-4">
+
+                <div class="col-md-6">
+                    <a class="navbar-brand marca marca-rodape" href="#inicio">
+                        belle<span>.</span>
+                    </a>
+
+                    <p class="texto-rodape mt-3 mb-0">
+                        Estética, cuidado e bem-estar em um só lugar.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end gap-3 mb-3">
+                        <a href="#inicio" class="link-rodape">Início</a>
+                        <a href="#sobre" class="link-rodape">A clínica</a>
+                        <a href="#procedimentos" class="link-rodape">Procedimentos</a>
+                        <a href="#agendamento" class="link-rodape">Agendamento</a>
+                    </div>
+
+                    <p class="texto-rodape mb-0">
+                        © 2026 Belle Clinic. Todos os direitos reservados.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PLAYER DE MÚSICA -->
+    <div class="player-musica">
+
+        <audio id="musicaAmbiente" loop>
+            <source src="audio/musica-ambiente.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+
+        <button type="button" id="btnMusica" aria-label="Tocar música">
+            <i class="bi bi-play-fill"></i>
+        </button>
+
+        <div class="info-musica">
+            <span>MÚSICA AMBIENTE</span>
+            <small id="estadoMusica">Pausada</small>
+        </div>
+
+        <input type="range" id="volumeMusica"
+            min="0" max="1" step="0.1" value="0.4"
+            aria-label="Volume da música">
 
     </div>
-  </div>
-</main>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EmailJS: opcional, para envio de e-mails -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+
+    <!-- JavaScript próprio -->
+    <script src="js/app.js"></script>
+
+</body>
+</html> 

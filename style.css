@@ -1,0 +1,652 @@
+
+/* =========================================
+   BELLE CLINIC - IDENTIDADE VISUAL
+   ========================================= */
+
+:root {
+    --belle-wine: #561C24;
+    --belle-wine-light: #6D2932;
+    --belle-beige: #C7B7A3;
+    --belle-cream: #EBD8C4;
+    --belle-white: #FBF8F4;
+    --belle-text: #453532;
+    --belle-muted: #82736D;
+    --belle-gold: #B08A52;
+}
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    padding-top: 70px;
+    margin: 0;
+    background: var(--belle-wine) !important;
+    color: var(--belle-cream);
+    font-family: "DM Sans", sans-serif;
+}
+
+.titulo,
+.marca {
+    font-family: "Playfair Display", serif;
+}
+
+.titulo {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.titulo em {
+    color: var(--belle-gold);
+    font-style: italic;
+}
+
+.subtitulo {
+    color: var(--belle-gold);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .17em;
+    margin-bottom: 1.2rem;
+}
+
+.texto-dourado {
+    color: var(--belle-gold) !important;
+}
+
+.texto-claro {
+    color: var(--belle-cream) !important;
+}
+
+/* =========================================
+   MENU SUPERIOR
+   ========================================= */
+
+.menu-belle {
+    background: var(--belle-wine) !important;
+    border-bottom: 2px solid var(--belle-gold);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .25);
+}
+
+.menu-belle .navbar-brand,
+.menu-belle .marca {
+    color: var(--belle-white) !important;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -.06em;
+}
+
+.menu-belle .marca span {
+    color: var(--belle-gold) !important;
+}
+
+.menu-belle .navbar-nav .nav-link {
+    color: var(--belle-cream) !important;
+    font-size: .94rem;
+    font-weight: 600;
+    opacity: 1 !important;
+    transition: color .3s;
+}
+
+.menu-belle .navbar-nav .nav-link:hover,
+.menu-belle .navbar-nav .nav-link:focus,
+.menu-belle .navbar-nav .nav-link.active {
+    color: var(--belle-gold) !important;
+}
+
+.menu-belle .navbar-toggler {
+    border: 1px solid var(--belle-gold);
+}
+
+.menu-belle .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.menu-belle .navbar-toggler:focus {
+    box-shadow: 0 0 0 .2rem rgba(176, 138, 82, .3);
+}
+
+.btn-belle-nav {
+    color: var(--belle-wine) !important;
+    background: var(--belle-gold) !important;
+    border: 1px solid var(--belle-gold);
+    border-radius: 30px;
+    padding: .65rem 1.2rem;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-belle-nav:hover {
+    color: var(--belle-wine) !important;
+    background: var(--belle-cream) !important;
+    border-color: var(--belle-cream);
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.btn-belle {
+    color: var(--belle-wine) !important;
+    background: var(--belle-gold);
+    border: 1px solid var(--belle-gold);
+    border-radius: 30px;
+    padding: .85rem 1.4rem;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-belle:hover,
+.btn-belle:focus {
+    color: var(--belle-wine) !important;
+    background: var(--belle-cream);
+    border-color: var(--belle-cream);
+}
+
+.btn-outline-belle-claro {
+    color: var(--belle-cream) !important;
+    background: transparent;
+    border: 1px solid var(--belle-cream);
+    border-radius: 30px;
+    padding: .85rem 1.4rem;
+    transition: .3s;
+}
+
+.btn-outline-belle-claro:hover {
+    color: var(--belle-wine) !important;
+    background: var(--belle-cream);
+    border-color: var(--belle-cream);
+}
+
+/* =========================================
+   INÍCIO
+   ========================================= */
+
+.inicio {
+    color: var(--belle-cream);
+    background: linear-gradient(
+        120deg,
+        #561C24 0%,
+        #6D2932 55%,
+        #561C24 100%
+    ) !important;
+    border-bottom: 5px solid var(--belle-gold);
+}
+
+.titulo-inicio {
+    color: var(--belle-white) !important;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.titulo-inicio em {
+    display: block;
+    color: var(--belle-gold) !important;
+}
+
+.texto-inicio {
+    max-width: 520px;
+    color: var(--belle-cream) !important;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.imagem-inicio {
+    padding: 12px;
+    border: 1px solid var(--belle-gold);
+    border-radius: 48% 48% 12px 12px;
+    background: rgba(255, 255, 255, .04);
+}
+
+.imagem-inicio img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    border-radius: 48% 48% 8px 8px;
+}
+
+/* =========================================
+   FAIXA DE DESTAQUES
+   ========================================= */
+
+.faixa-belle {
+    color: var(--belle-cream) !important;
+    background: var(--belle-wine-light) !important;
+    border-bottom: 1px solid var(--belle-gold);
+}
+
+.faixa-belle h5 {
+    color: var(--belle-cream) !important;
+    margin: .7rem 0 0;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.faixa-icone {
+    color: var(--belle-gold) !important;
+    font-size: 1.8rem;
+}
+
+/* =========================================
+   A CLÍNICA
+   ========================================= */
+
+.secao-sobre {
+    color: var(--belle-cream);
+    background: var(--belle-wine-light) !important;
+    border-bottom: 5px solid var(--belle-gold);
+}
+
+.secao-sobre .subtitulo {
+    color: var(--belle-gold) !important;
+}
+
+.imagem-sobre {
+    padding: 10px;
+    border: 1px solid var(--belle-gold);
+    border-radius: 12px;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.titulo-secao {
+    color: var(--belle-white) !important;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+.texto-secao {
+    color: var(--belle-cream) !important;
+    line-height: 1.8;
+}
+
+.valor-card {
+    height: 100%;
+    padding: 1.4rem;
+    background: var(--belle-cream);
+    border: 1px solid var(--belle-gold);
+    border-radius: 10px;
+}
+
+.valor-card i {
+    color: var(--belle-wine);
+    font-size: 1.7rem;
+}
+
+.valor-card h5 {
+    margin-top: .8rem;
+    color: var(--belle-wine);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+.valor-card p {
+    margin-bottom: 0;
+    color: var(--belle-text);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+   PROCEDIMENTOS
+   ========================================= */
+
+.secao-procedimentos {
+    color: var(--belle-cream);
+    background: var(--belle-wine) !important;
+    border-bottom: 5px solid var(--belle-gold);
+}
+
+.titulo-claro {
+    color: var(--belle-white) !important;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.card-procedimento {
+    overflow: hidden;
+    background: var(--belle-cream);
+    border: 1px solid var(--belle-gold);
+    border-radius: 12px;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card-procedimento:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .22);
+}
+
+.card-procedimento img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-procedimento .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.4rem;
+}
+
+.card-procedimento .card-title {
+    color: var(--belle-wine);
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.card-procedimento .card-text {
+    flex-grow: 1;
+    color: var(--belle-text);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+.btn-service {
+    margin-top: 1rem;
+    padding: .6rem 1rem;
+    color: var(--belle-wine);
+    background: transparent;
+    border: 1px solid var(--belle-wine);
+    border-radius: 25px;
+    font-size: .88rem;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-service:hover {
+    color: var(--belle-cream);
+    background: var(--belle-wine);
+}
+
+/* =========================================
+   AGENDAMENTO
+   ========================================= */
+
+.secao-agendamento {
+    color: var(--belle-cream);
+    background: var(--belle-wine-light) !important;
+    border-bottom: 5px solid var(--belle-gold);
+}
+
+.secao-agendamento .subtitulo {
+    color: var(--belle-gold) !important;
+}
+
+.secao-agendamento .titulo-secao {
+    color: var(--belle-white) !important;
+}
+
+.secao-agendamento p {
+    color: var(--belle-cream);
+}
+
+.formulario-belle {
+    padding: clamp(1.3rem, 4vw, 3rem);
+    background: var(--belle-cream);
+    border: 2px solid var(--belle-gold);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+}
+
+.formulario-belle .form-label {
+    color: var(--belle-wine);
+    font-weight: 700;
+}
+
+.formulario-belle .form-control,
+.formulario-belle .form-select {
+    min-height: 48px;
+    color: var(--belle-text);
+    background: var(--belle-white);
+    border: 1px solid var(--belle-beige);
+    border-radius: 8px;
+}
+
+.formulario-belle .form-control:focus,
+.formulario-belle .form-select:focus {
+    border-color: var(--belle-wine-light);
+    box-shadow: 0 0 0 .2rem rgba(86, 28, 36, .15);
+}
+
+.formulario-belle .form-control::placeholder {
+    color: #82736D;
+}
+
+.formulario-belle .invalid-feedback {
+    font-weight: 500;
+}
+
+#feedback:empty {
+    display: none;
+}
+
+.contador-belle {
+    padding: .5rem 1rem;
+    color: var(--belle-wine);
+    background: var(--belle-gold);
+    border-radius: 30px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.agendamento-card {
+    height: 100%;
+    padding: 1.4rem;
+    color: var(--belle-text);
+    background: var(--belle-cream);
+    border: 1px solid var(--belle-gold);
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.agendamento-card h4 {
+    color: var(--belle-wine);
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.agendamento-card p {
+    margin-bottom: .55rem;
+    color: var(--belle-text);
+    font-size: .92rem;
+}
+
+.status-email {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .35rem .65rem;
+    color: var(--belle-wine);
+    background: #e4d2b8;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.status-email.enviado {
+    color: #24543a;
+    background: #d7eadc;
+}
+
+.status-email.falhou {
+    color: #762a2a;
+    background: #f2dada;
+}
+
+.btn-remover {
+    color: white;
+    background: var(--belle-wine);
+    border: 1px solid var(--belle-wine);
+    border-radius: 25px;
+    font-size: .85rem;
+}
+
+.btn-remover:hover {
+    color: white;
+    background: var(--belle-wine-light);
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    color: var(--belle-cream);
+    background: var(--belle-wine) !important;
+    border-top: 1px solid var(--belle-gold);
+}
+
+.marca-rodape {
+    color: var(--belle-white) !important;
+}
+
+.marca-rodape:hover {
+    color: var(--belle-cream) !important;
+}
+
+.texto-rodape {
+    color: var(--belle-cream) !important;
+    font-size: .9rem;
+}
+
+.link-rodape {
+    color: var(--belle-cream) !important;
+    text-decoration: none;
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.link-rodape:hover {
+    color: var(--belle-gold) !important;
+}
+
+/* =========================================
+   PLAYER DE MÚSICA
+   ========================================= */
+
+.player-musica {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(350px, calc(100vw - 30px));
+    padding: 12px 15px;
+    color: var(--belle-cream);
+    background: var(--belle-wine) !important;
+    border: 1px solid var(--belle-gold);
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.player-musica button {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--belle-wine);
+    background: var(--belle-gold);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.player-musica button:hover {
+    background: var(--belle-cream);
+}
+
+.info-musica {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.info-musica span {
+    color: var(--belle-cream);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.info-musica small {
+    color: var(--belle-gold);
+    font-size: .75rem;
+}
+
+#volumeMusica {
+    width: 75px;
+    accent-color: var(--belle-gold);
+    cursor: pointer;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        padding: 1rem 0;
+        background: var(--belle-wine);
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .inicio .min-vh-100 {
+        min-height: auto !important;
+    }
+
+    .imagem-inicio img {
+        height: 450px;
+    }
+
+    .imagem-sobre img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    body {
+        padding-top: 65px;
+    }
+
+    .titulo-inicio {
+        font-size: 2.7rem;
+    }
+
+    .imagem-inicio img {
+        height: 330px;
+    }
+
+    .imagem-sobre img {
+        height: 300px;
+    }
+
+    .player-musica {
+        right: 10px;
+        bottom: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    #volumeMusica {
+        width: 60px;
+    }
+}
